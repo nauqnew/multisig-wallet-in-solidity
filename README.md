@@ -1,2 +1,2 @@
-# This is a contract from solidity-by-example, I add a test file. 
+Add a test file for MultiSigWallet from Solidity-by-example.
 npx hardhat test
