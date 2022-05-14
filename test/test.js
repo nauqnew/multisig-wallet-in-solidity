@@ -25,19 +25,12 @@ describe("MultiSigWallet", function () {
 
     const txData = await testContract.getData()
 
-    // now submit a transaction from account[0]
-    // const tx = await accounts[0].sendTransaction({
-    //   to: testContract.address,
-    //   value: 0,
-    //   data: txData
-    // })
     console.log('now submit a transaction from account 0 ...')
     const singer0 = await multiSigWallet.connect(accounts[0]);
     const tx = await singer0.submitTransaction(testContract.address, 0, txData)
     await tx.wait()
 
     // approve tx from account[0]
-    // const txs = await singer0.transactions()
     let txId = 0
     console.log('now confirm a transaction from account 0 ...')
 
